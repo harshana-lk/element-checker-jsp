@@ -7,8 +7,15 @@
 <body>
 
 <form action="register" method="GET">
-    <input type="text" placeholder="User Name" name="user">
-    <button type="submit">Submit</button>
+    <select name="Languages" id="language">
+        <option value="Java">Learning Language</option>
+        <option value="Php">Back-End Development</option>
+        <option value="Css">Styling</option>
+        <option value="Java Script">Web Technology</option>
+        <option value="Flutter">Mobile App Development</option>
+    </select>
+
+    <button type="submit">Click here</button>
 </form>
 
 <h1>${studentName}:- Student was Registered</h1>
