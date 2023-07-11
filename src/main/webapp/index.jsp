@@ -7,15 +7,12 @@
 <body>
 
 <form action="register" method="GET">
-    <select name="Languages" id="language">
-        <option value="Java">Learning Language</option>
-        <option value="Php">Back-End Development</option>
-        <option value="Css">Styling</option>
-        <option value="Java Script">Web Technology</option>
-        <option value="Flutter">Mobile App Development</option>
-    </select>
-
-    <button type="submit">Click here</button>
+        <input type="checkbox" name="language" value="Java"> Java
+        <input type="checkbox" name="language" value="PHP"> PHP
+        <input type="checkbox" name="language" value="CSS"> CSS
+        <input type="checkbox" name="language" value="React"> React
+        <input type="checkbox" name="language" value="Node"> Node
+    <button type="submit">Submit here</button>
 </form>
 
 <h1>${studentName}:- Student was Registered</h1>

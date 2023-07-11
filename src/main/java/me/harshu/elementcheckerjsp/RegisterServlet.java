@@ -12,6 +12,8 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(req.getParameter("Languages"));
+        for (String data : req.getParameterValues("language")) {
+            System.out.println(data);
+        }
     }
 }
