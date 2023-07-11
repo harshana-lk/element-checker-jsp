@@ -8,11 +8,16 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "register-servlet",urlPatterns = "/register")
+@WebServlet(name = "register-servlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userName = req.getParameter("user");
-        System.out.println(userName);
+        if (userName.length()==0) {
+            resp.sendRedirect("/InternalServerErrorPage.jsp");
+        } else {
+            req.setAttribute("studentName", userName);
+            getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+        }
     }
 }
